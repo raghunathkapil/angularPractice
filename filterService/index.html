@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Filter Service</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app='myApp'>
+  <div ng-controller="filterController">
+  <p>enter your string :
+      <input type="text" name="inputString" ng-model="inputString">
+    <button ng-click="convertCap()">Click</button>
+    
+    {{ resultString | removeDuplicateChar }}
+  </p>
+  </div>
+</body>
+
+</html>
