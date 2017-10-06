@@ -1,0 +1,17 @@
+<h3>Display multiplication tables</h3>
+<form class="form-inline">
+    <div class="form-group">
+        Enter Number: <input type="number" ng-model="number" class="form-control" />
+        <button ng-click="getTables()" class="btn btn-default">click</button>
+    </div>
+</form>
+Result:
+<div class="row">
+    <div ng-repeat="multiply in resultMultiplecation" class="card col-md-8">
+        <div ng-repeat="tables in multiply">
+            <div>
+                <p>{{$parent.$index+1}} * {{$index+1}} = {{tables}}</p>
+            </div>
+        </div>
+    </div>
+</div>
